@@ -1,14 +1,6 @@
 import streamlit as st
 import requests
-from dotenv import load_dotenv
-import os
-
-
-from dotenv import load_dotenv
-import os
-
-load_dotenv()  # automatically loads .env from same folder
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
 
 # =================== TITLE =====================
